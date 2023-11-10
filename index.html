@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="container">
         <div class="header container">
             <a href="#"><img class="logo" src="./img/logo.svg" alt="logojon"></a>
             <nav class="header-nav">
@@ -25,7 +28,7 @@
             </button>
         </div>
     </header>
-    <main>
+    <main class="container">
         <div class="hero container">
             <div class="hero-section">
                 <h1 class="hero-heading">Great coffee made simple.</h1>
@@ -35,35 +38,34 @@
             </div>
         </div>
 
-        <div class="site-collection">
             <div class="collection container">
-            <ul class="collection-list">
-                <li class="collection-item"><img src="./img/kopi2.png" alt="" width="256" height="193">
-                    <div class="collection-section">
-                    <h3 class="collection-heading">Gran Espresso</h3>
-                <p class="collection-text">Light and flavorful blend with cocoa and black pepper for an intense experience.</p>
+                <h1 class="collection__title">our collection</h1>
+            <ul class="collection__list">
+                <li class="collection__item"><img src="./img/kopi2.png" alt="" width="256" height="193">
+                    <div class="collection__section">
+                    <h3 class="collection__heading">Gran Espresso</h3>
+                <p class="collection__text">Light and flavorful blend with cocoa and black pepper for an intense experience.</p>
                     </div>
             </li>
-                <li class="collection-item"><img src="./img/kopi2.png" alt="" width="256" height="193">
-                    <div class="collection-section">
-                    <h3 class="collection-heading">Planalto</h3>
-                <p class="collection-text">Brazilian dark roast with rich and velvety body, and hints of fruits and nuts.</p>
+                <li class="collection__item"><img src="./img/kopi2.png" alt="" width="256" height="193">
+                <div class="collection__section">
+                    <h3 class="collection__heading">Planalto</h3>
+                    <p class="collection__text">Brazilian dark roast with rich and velvety body, and hints of fruits and nuts.</p>
+                </div>
+            </li>
+                <li class="collection__item"><img src="./img/kopi2.png" alt="" width="256" height="193">
+                    <div class="collection__section">
+                    <h3 class="collection__heading">Piccollo</h3>
+                <p class="collection__text">Mild and smooth blend featuring notes of toasted almond and dried cherry.</p>
                     </div>
             </li>
-                <li class="collection-item"><img src="./img/kopi2.png" alt="" width="256" height="193">
-                    <div class="collection-section">
-                    <h3 class="collection-heading">Piccollo</h3>
-                <p class="collection-text">Mild and smooth blend featuring notes of toasted almond and dried cherry.</p>
-                    </div>
-            </li>
-                <li class="collection-item"><img src="./img/kopi2.png" alt="" width="256" height="193">
-                    <div class="collection-section">
-                    <h3 class="collection-heading">Danche</h3>
-                <p class="collection-text">Ethiopian hand-harvested blend densely packed with vibrant fruit notes.</p>
+                <li class="collection__item"><img src="./img/kopi2.png" alt="" width="256" height="193">
+                    <div class="collection__section">
+                    <h3 class="collection__heading">Danche</h3>
+                <p class="collection__text">Ethiopian hand-harvested blend densely packed with vibrant fruit notes.</p>
                     </div>
             </li>
             </ul>
-        </div>
         </div>
     </main>
 
