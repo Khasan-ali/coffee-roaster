@@ -54,6 +54,7 @@ img {
 }
 
 .header-list-link {
+  white-space: nowrap;
   color: #83888F;
   font-family: Barlow;
   font-size: 12px;
@@ -71,46 +72,51 @@ img {
   background-color: transparent;
 }
 
+.header-close {
+  display: none;
+}
+
 @media only screen and (max-width: 800px) {
   .header {
+    position: relative;
     max-width: 800px;
     width: 100%;
   }
+  .header-btn {
+    display: inline-block;
+  }
   .header-list {
     display: none;
-  }
-  .header-btn {
-    display: inline;
   }
   .header-close {
     display: none;
   }
-}
-@media only screen and (max-width: 400px) {
-  .header {
-    position: relative;
-    max-width: 400px;
-    width: 100%;
-  }
-  .header-list {
-    display: none;
-  }
-  .header-btn {
-    display: flex;
-  }
-  .header-list {
+  .header--open .header-nav {
     position: absolute;
-    display: none;
-    left: 0;
-    top: 30%;
-    transform: translateY(5%);
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
     z-index: 5;
+  }
+  .header--open .header-list {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 100px;
     background-color: #fff;
     color: #000;
     height: 100vh;
+    width: 100%;
+  }
+  .header--open .header-btn {
+    display: none;
+  }
+  .header--open .header-close {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .header {
     max-width: 400px;
     width: 100%;
   }
@@ -246,8 +252,8 @@ img {
 .collection__list {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, 3%);
+  top: 100%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,17 +302,18 @@ img {
     padding-bottom: 953px;
   }
   .collection__title {
-    max-width: 689px;
+    max-width: 400px;
     width: 100%;
     font-size: 96px;
   }
   .collection__list {
     flex-direction: column;
-    top: 14%;
-    transform: translate(-13%, center);
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .collection__item {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
   .collection__item:not(:last-child) {
@@ -325,8 +332,9 @@ img {
   }
   .collection__list {
     flex-direction: column;
-    top: 20%;
-    transform: translate(-20%, center);
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .collection__item {
     flex-direction: column;

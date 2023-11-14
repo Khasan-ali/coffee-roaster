@@ -1,17 +1,15 @@
 const elBtn = document.querySelector('.header-btn');
+const elHeader = document.querySelector('.header')
 const elNavbar = document.querySelector('.header-nav');
 const elClose = document.querySelector('.header-close');
 
-// elNavbar.style.display = "none";
 
 elBtn.addEventListener('click', ()=> {
-    elNavbar.style.display = "flex";
-    elBtn.style.display = 'none';
-    elClose.style.display = 'inline';
+    elHeader.classList.toggle('header--open')
+    // elBtn.style.display = 'none';
+    // elClose.style.display = 'inline-block';
 })
 
 elClose.addEventListener('click', ()=> {
-    elNavbar.style.display = "none";
-    elBtn.style.display = 'inline';
-    elClose.style.display = 'none';
+    elHeader.classList.remove('header--open')
 })
