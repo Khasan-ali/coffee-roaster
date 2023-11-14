@@ -2,6 +2,8 @@ const elBtn = document.querySelector('.header-btn');
 const elNavbar = document.querySelector('.header-nav');
 const elClose = document.querySelector('.header-close');
 
+// elNavbar.style.display = "none";
+
 elBtn.addEventListener('click', ()=> {
     elNavbar.style.display = "flex";
     elBtn.style.display = 'none';

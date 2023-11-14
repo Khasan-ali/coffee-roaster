@@ -76,6 +76,12 @@ img {
     max-width: 800px;
     width: 100%;
   }
+  .header-list {
+    display: none;
+  }
+  .header-btn {
+    display: inline;
+  }
   .header-close {
     display: none;
   }
@@ -83,7 +89,8 @@ img {
 @media only screen and (max-width: 400px) {
   .header {
     position: relative;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
   }
   .header-list {
     display: none;
@@ -93,6 +100,7 @@ img {
   }
   .header-list {
     position: absolute;
+    display: none;
     left: 0;
     top: 30%;
     transform: translateY(5%);
@@ -103,6 +111,7 @@ img {
     background-color: #fff;
     color: #000;
     height: 100vh;
+    max-width: 400px;
     width: 100%;
   }
 }
