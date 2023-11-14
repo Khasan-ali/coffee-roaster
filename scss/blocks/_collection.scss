@@ -76,7 +76,8 @@
     }
 
     .collection__title {
-        width: 689px;
+        max-width: 689px;
+        width: 100%;
         font-size: 96px;
     }
 
@@ -103,7 +104,8 @@
     }
 
     .collection__title {
-        width: 375px;
+        max-width: 375px;
+        width: 100%;
         font-size: 40px;
     }
 

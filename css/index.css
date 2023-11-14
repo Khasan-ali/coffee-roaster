@@ -30,7 +30,8 @@ img {
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  width: 1320px;
+  max-width: 1320px;
+  width: 100%;
 }
 
 .header {
@@ -286,7 +287,8 @@ img {
     padding-bottom: 953px;
   }
   .collection__title {
-    width: 689px;
+    max-width: 689px;
+    width: 100%;
     font-size: 96px;
   }
   .collection__list {
@@ -308,7 +310,8 @@ img {
     padding-top: 120px;
   }
   .collection__title {
-    width: 375px;
+    max-width: 375px;
+    width: 100%;
     font-size: 40px;
   }
   .collection__list {
