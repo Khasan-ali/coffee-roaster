@@ -2,42 +2,21 @@ const elBtn = document.querySelector('.header-btn');
 const elHeader = document.querySelector('.header')
 const elClose = document.querySelector('.header-close');
 
-const elRadiosHeadingLink = document.querySelectorAll('.radios__left-heading-link')
-const elRadiosHeading = document.querySelectorAll('.radios__left-heading')
+const elRadiosHeadingSection = document.querySelector('.radios__left')
 
-elRadiosHeadingLink[0].addEventListener('click', ()=> {
-    elRadiosHeading[0].classList.toggle('radios__left-heading-open')
-})
-elRadiosHeadingLink[1].addEventListener('click', ()=> {
-    elRadiosHeading[1].classList.toggle('radios__left-heading-open')
-})
-elRadiosHeadingLink[2].addEventListener('click', ()=> {
-    elRadiosHeading[2].classList.toggle('radios__left-heading-open')
-})
-elRadiosHeadingLink[3].addEventListener('click', ()=> {
-    elRadiosHeading[3].classList.toggle('radios__left-heading-open')
-})
-elRadiosHeadingLink[4].addEventListener('click', ()=> {
-    elRadiosHeading[4].classList.toggle('radios__left-heading-open')
+elRadiosHeadingSection.addEventListener('click', (e) => {
+    if(e.target.closest('.radios__left-heading')){
+        e.target.closest('.radios__left-heading').classList.toggle('radios__left-heading-open')
+    }
 })
 
-const elRadiosBtn = document.querySelectorAll('.radios__right-select')
-const elRadiosSection = document.querySelectorAll('.radios__section')
 
-elRadiosBtn[0].addEventListener('click', ()=> {
-    elRadiosSection[0].classList.toggle('radios__right-select-open')
-})
-elRadiosBtn[1].addEventListener('click', ()=> {
-    elRadiosSection[1].classList.toggle('radios__right-select-open')
-})
-elRadiosBtn[2].addEventListener('click', ()=> {
-    elRadiosSection[2].classList.toggle('radios__right-select-open')
-})
-elRadiosBtn[3].addEventListener('click', ()=> {
-    elRadiosSection[3].classList.toggle('radios__right-select-open')
-})
-elRadiosBtn[4].addEventListener('click', ()=> {
-    elRadiosSection[4].classList.toggle('radios__right-select-open')
+const elList = document.querySelector('.radios__right')
+
+elList.addEventListener('click', (evt) => {
+    if(evt.target.closest('.radios__section')){
+        evt.target.closest('.radios__section').classList.toggle('radios__right-select-open')
+    }
 })
 
 
@@ -49,4 +28,44 @@ elBtn.addEventListener('click', ()=> {
 
 elClose.addEventListener('click', ()=> {
     elHeader.classList.remove('header--open')
+})
+
+
+// RESULT
+let elForm = document.querySelector('.radios__form')
+let elFormInput = document.querySelectorAll('.radios__input')
+let elFormDesc = document.querySelector('.radios__result-desc')
+
+let newArr = {
+    drink: '',
+    coffee: '',
+    delicious: '',
+    drip: '',
+    free: '',
+}
+
+elForm.addEventListener('change', (evt) => {
+    evt.preventDefault()
+    let res = evt.target.closest('.radios__input')
+     
+    if(res.name === 'drink'){
+        newArr.drink = res.value
+    }else if(res.name === 'coffee'){
+        newArr.coffee = res.value
+
+    }else if(res.name === 'delicious'){
+        newArr.delicious = res.value
+
+    }else if(res.name === 'drip'){
+        newArr.drip = res.value
+        
+    }else if(res.name === 'free'){
+        newArr.free = res.value
+        
+    }
+
+    elFormDesc.textContent = `“I drink my coffee as ${newArr.drink}, with a ${newArr.coffee} 
+    type of bean. ${newArr.delicious} ground ala ${newArr.drip}, sent to me ${newArr.free}.”`
+
+
 })

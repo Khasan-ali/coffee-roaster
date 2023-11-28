@@ -54,6 +54,18 @@
     border-bottom: 1px solid rgba(131, 136, 143, 0.25);
 }
 
+.radios__right_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radios__result-desc {
+    margin: 0;
+    max-width: 600px;
+    width: 100%;
+}
+
 .radios__right {
     display: flex;
     flex-direction: column;
